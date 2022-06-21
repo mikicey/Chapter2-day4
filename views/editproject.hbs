@@ -55,8 +55,8 @@
           <form class="container" method="post" action="/editmyproject/{{dataToEdit.id}}">
               <!-- Project Name -->
               <div class="mb-4" >
-                <label for="project-name" class="form-label mb-1">Project Name</label>
-                <input type="text" class="form-control" id="project-name" name="title" value={{dataToEdit.title}}>
+                  <label for="project-name" class="form-label mb-1">Project Name</label>
+                  <input type="text" class="form-control" id="project-name" name="title" value={{dataToEdit.title}}>
               </div>
 
               <!-- Project Date -->
@@ -74,8 +74,8 @@
 
               <!-- Project Description -->
               <div class="mb-4">
-                <label for="project-des" class="form-label mb-1">Description</label>
-                <textarea class="form-control" id="project-des" rows="6" name="description">{{dataToEdit.description}}</textarea>
+                  <label for="project-des" class="form-label mb-1">Description</label>
+                  <textarea class="form-control" id="project-des" rows="6" name="description">{{dataToEdit.description}}</textarea>
               </div>
 
               <!-- Project Technologies -->
@@ -130,15 +130,15 @@
 
               <!-- Project Image -->
               <div class="image-input mb-5" style="position: relative;">
-                <label for="project-img" class="form-label mb-1">Upload Image</label>
-                <input class="form-control" id="project-img" type="file" name="image">
-                <img src="/images/file.png" style="position: absolute; right: 8px; top: 36px;">
+                 <label for="project-img" class="form-label mb-1">Upload Image</label>
+                 <input class="form-control" id="project-img" type="file" name="image">
+                 <img src="/images/file.png" style="position: absolute; right: 8px; top: 36px;">
               </div>
 
               <!-- Submit Button -->
               <div class="btn-group">
-              <button class="update-btn" type="submit">Update</button>
-              <button class="cancel-btn" type="button">Cancel</button>
+                 <button class="update-btn" type="submit">Update</button>
+                 <button class="cancel-btn" type="button">Cancel</button>
               </div>
               
           </form>

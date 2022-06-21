@@ -251,7 +251,7 @@ section{
 
 .project-buttons button{
    position: relative;
-   flex: 1;
+   width: 100%;
    background-color: #111727 ;
    font-weight: bold;
    color: white;
@@ -263,12 +263,13 @@ section{
    cursor: pointer;
 }
 
-.project-buttons button:first-child{
+.project-buttons a:first-child{
     margin-right: 4px;
  }
 
  .project-buttons a {
     text-decoration: none;
+    flex: 1;
  }
 
 .empty-project{

@@ -24,7 +24,7 @@ app.get("/" , (req,res)=> {
     db.connect(function(err,client,done){
     if(err) throw err // menampilkan error koneksi
 
-    client.query("SELECT * FROM public.projects", function(err,result){
+    client.query("SELECT * FROM public.projects ORDER BY id DESC", function(err,result){
         if(err) throw err
 
         let data = result.rows;
@@ -73,7 +73,7 @@ app.post("/postmyproject",(req,res)=>{
                     description:req.body.description, tech:tech, img:imageUrl};
 
     data.push(newData);
-    console.log(data)
+    
 
     res.redirect("/");
 });
@@ -84,7 +84,7 @@ app.get("/deletemyproject/:id",(req,res)=>{
     
     const id = Number(req.params.id);
     data = data.filter(item => item.id !== id);
-    console.log(data)
+    
 
     res.redirect("/");
 })
@@ -126,7 +126,7 @@ app.post("/editmyproject/:id",(req,res)=>{
         return item
     }});
 
-    console.log(data)
+    
 
     res.redirect("/")
 
